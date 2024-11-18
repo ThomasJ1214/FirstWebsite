@@ -15,8 +15,9 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            text-align: center;
             overflow: hidden;
+            position: relative;
+            text-align: center;
         }
 
         h1 {
@@ -25,23 +26,30 @@
             color: #5a189a;
             letter-spacing: 2px;
             text-transform: uppercase;
+            position: absolute;
+            top: 20%;
         }
 
         p {
             font-size: 1.5rem;
             color: #f72585;
             animation: fadeIn 2s ease-out;
+            position: absolute;
+            top: 35%;
         }
 
         .emoji {
             font-size: 4rem;
             animation: spin 3s infinite linear, bounce 2s infinite;
+            position: absolute;
+            top: 55%;
+            left: 40%;
         }
 
         .background-shape {
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 10%;
+            left: 80%;
             transform: translate(-50%, -50%);
             width: 200px;
             height: 200px;
@@ -61,7 +69,9 @@
             font-size: 1.5rem;
             cursor: pointer;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s ease, background-color 0.2s;
+            position: absolute;
+            bottom: 10%;
+            animation: buttonAnimation 1.5s infinite ease-in-out;
         }
 
         .button:hover {
@@ -117,6 +127,15 @@
             }
             100% {
                 transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        @keyframes buttonAnimation {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
             }
         }
 
