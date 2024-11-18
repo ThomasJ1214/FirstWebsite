@@ -38,22 +38,17 @@
         }
 
         .emoji {
-            font-size: 4rem;
+            font-size: 8rem;
             animation: spin 3s infinite linear, bounce 2s infinite;
-            margin: 30px 0;
+            position: absolute;
         }
 
-        .background-shape {
-            position: absolute;
-            top: 10%;
-            left: 80%;
-            transform: translate(-50%, -50%);
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background-color: #4cc9f0;
-            animation: moveShape 4s infinite ease-in-out;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        .emoji-left {
+            left: 5%;
+        }
+
+        .emoji-right {
+            right: 5%;
         }
 
         .button {
@@ -115,18 +110,6 @@
             }
         }
 
-        @keyframes moveShape {
-            0% {
-                transform: translate(-50%, -50%) scale(1);
-            }
-            50% {
-                transform: translate(-30%, -40%) scale(1.5);
-            }
-            100% {
-                transform: translate(-50%, -50%) scale(1);
-            }
-        }
-
         @keyframes buttonAnimation {
             0%, 100% {
                 transform: scale(1);
@@ -142,9 +125,12 @@
 
     <h1>Oops! 🚧</h1>
     <p>Sorry, but this website is still being built by Thomas Jenkins!</p>
-    <div class="emoji">🔨</div>
+
+    <!-- Hammer emojis on both sides -->
+    <div class="emoji emoji-left">🔨</div>
+    <div class="emoji emoji-right">🔨</div>
+
     <button class="button">Check Back Soon!</button>
-    <div class="background-shape"></div>
 
 </body>
 </html>
