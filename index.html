@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Jenkins' Website</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+            color: #333;
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3rem;
+            animation: bounce 2s infinite, textColor 3s alternate infinite;
+            color: #5a189a;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: #f72585;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .emoji {
+            font-size: 4rem;
+            animation: spin 3s infinite linear, bounce 2s infinite;
+        }
+
+        .background-shape {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #4cc9f0;
+            animation: moveShape 4s infinite ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #4cc9f0;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease, background-color 0.2s;
+        }
+
+        .button:hover {
+            background-color: #4895ef;
+            transform: scale(1.1);
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes textColor {
+            0% {
+                color: #5a189a;
+            }
+            50% {
+                color: #ff6f61;
+            }
+            100% {
+                color: #f72585;
+            }
+        }
+
+        @keyframes moveShape {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% {
+                transform: translate(-30%, -40%) scale(1.5);
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Oops! 🚧</h1>
+    <p>Sorry, but this website is still being built by Thomas Jenkins!</p>
+    <div class="emoji">🔨</div>
+    <button class="button">Check Back Soon!</button>
+    <div class="background-shape"></div>
+
+</body>
+</html>
